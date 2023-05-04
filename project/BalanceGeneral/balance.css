@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #0a0a23;
+}
+
+span[class~="sr-only"] {
+  border: 0 !important;
+  clip: rect(
+    1px,
+    1px,
+    1px,
+    1px
+  ) !important ; /* La propiedad de clip CSS se utiliza para definir las partes visibles de un elemento. */
+  clip-path: inset(
+    50%
+  ) !important; /*La propiedad clip-path determina la forma que debe tomar la propiedad clip.*/
+  -webkit-clip-path: inset(50%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important; /* evita que el contenido del texto se desborde*/
+  white-space: nowrap !important; /* evita que el contenido del texto se desborde*/
+  position: absolute !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+h1 {
+  max-width: 37.25rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+/* El pseudoselector :first-of-type se utiliza para apuntar al primer elemento que coincide con el selector.*/
+h1 .flex span:first-of-type {
+  /* <--- apunta al primer elemento span en su contenedor .flex. */
+  font-size: 0.7em;
+}
+
+/*El pseudoselector :last-of-type hace exactamente lo contrario: apunta al último elemento que coincide con el selector.*/
+h1 .flex span:last-of-type {
+  /*<---- apunta al último tramo en su contenedor flexible y le asígna una propiedad */
+  font-size: 1.2em;
+}
+
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 2px solid #d0d0d5;
+}
+
+#years {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  color: #fff;
+  background-color: #0a0a23;
+  z-index: 999;
+  margin: 0 -2px;
+  z-index: 999;
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /* La función calc() es una función CSS que le permite calcular un valor basado en otros valores. 
+                                                        Por ejemplo, puede usarlo para calcular el ancho de la ventana gráfica menos el margen de un elemento:
+                                                                        .example {
+                                                                        margin: 10px;
+                                                                        width: calc(100% - 20px);
+                                                                    }*/
+}
+
+#years span[class] {
+  /*La sintaxis span[class] apuntará a cualquier elemento span que tenga un conjunto de atributos de clase, independientemente del valor del atributo.*/
+  font-weight: bold;
+  width: 4.5rem;
+  text-align: right;
+}
+
+.table-wrap {
+  padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/*El pseudo-selector :not() se usa para apuntar a todos los elementos que no coinciden con el selector;
+ en este caso, cualquiera de sus elementos span que no tenga la clase sr-only.*/
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+table caption {
+  color: #356eaf;
+  font-size: 1.3em;
+  font-weight: normal;
+  position: absolute;
+  top: -2.25rem;
+  left: 0.5rem;
+}
+
+tbody td {
+  width: 100vw;
+  min-width: 4rem;
+  max-width: 4rem;
+}
+
+tbody th {
+  width: calc(100% - 12rem);
+}
+
+tr[class="total"] {
+  border: 4px double #0a0a23;
+  font-weight: bold;
+}
+
+tr[class="total"] th {
+  text-align: left;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td {
+  text-align: right;
+  padding: 0 0.25rem;
+}
+tr.total td:nth-of-type(3) {
+  padding-right: 0.5rem;
+}
+
+tr.total:hover {
+  background: #99c9ff;
+}
+
+td.current {
+  font-style: italic;
+}
+
+tr.data {
+  background: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+tr.data th {
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-top: 0.3rem;
+}
+
+tr.data th .description{
+    display: block;
+    padding: 1rem 0 0.75rem;
+    font-style: italic;
+    font-weight: normal;
+    margin-right:-13.5rem ;
+}
+
+tr.data td{
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type{
+    padding: 0.5rem;
+}

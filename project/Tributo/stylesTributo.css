@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+
+image {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  #img-div {
+    background: rgb(216, 214, 214);
+    padding: 10px;
+    margin: 0;
+}
+
+  h1, h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  ul {
+    width: 50%;
+    
+  }
+  li {
+    margin: 16px 0;
+    font-size: 18px;
+  }
+
+  .linea-temporal{
+    width: auto;
+    padding-left: 30% ;
+  }
+
+  .frase{
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 15% ;
+    padding-top: 3%;
+  }
+
+  .autor{
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 15% ;
+  }

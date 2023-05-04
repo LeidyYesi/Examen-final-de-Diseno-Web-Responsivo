@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border: 2px solid blue;
+  height: 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+/* position:fixed; /* para que el menú de navegación se quede fijo en pantalla*/
+ /* z-index: 100; /*con esto vamos a decirle que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla*/
+
+}
+
+/*===imagen del logo====*/
+.logo img {
+  width: 30%;
+  margin-left: 25px;
+}
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
+/*===NavBAr====*/
+.nav-bar {
+  /*border: 2px solid blue;*/
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  /*border: 1px solid blue;*/
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-link {
+  /*border: 1px solid pink;*/
+  text-decoration: none;
+  color: black;
+}
+
+/*===Contenedor de textos====*/
+.contenedor-text {
+  /* border: 1px solid blue;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+  width: 70vw;
+}
+.sub-title {
+  font-weight: 900;
+  font-style: inherit;
+  font-size: x-large;
+  text-align: left;
+}
+
+.text {
+  text-align: left;
+  font-size: medium;
+}
+
+i {
+  /*border: 1px solid green;*/
+  text-align: center;
+  width: 20vw;
+  height: 5vw;
+  font-size: 40px;
+}
+
+.icon {
+  /* border: 1px solid orange;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  height: 80px;
+  width: 10vw;
+}
+
+.block {
+  display: flex;
+}
+
+.contenedor {
+  /* border: 5px solid red;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vw;
+  width: 80vw;
+  margin: auto;
+}
+
+/*===Contenedor de video====*/
+
+.video {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/*===Contenedor de promos====*/
+
+.pricing {
+ /* border: 5px solid red;*/
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.product {
+  border: 1px solid black;
+  border-radius: 3%;
+  width: calc(90% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  text-align: center;
+  
+}
+
+.level {
+  background-color: gray;
+  width: 100%;
+}
+.product h2{
+  margin-top: 15px;
+}
+.product ol li{
+  padding: 5px 0;
+}
+.btn {
+  background-color: rgb(238, 224, 98);
+  border: none;
+  width: 30%;
+  height: 10%;
+ font-family: 400;
+  margin-top: 15px 0;
+}
+
+
+/*========mediaquerys===========*/
+@media (max-width: 770px) {
+  .contenedor-text {
+  /* border: 1px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  .sub-title {
+    font-weight: 800;
+    font-style: inherit;
+    font-size: smaller;
+    text-align: left;
+  }
+  
+  .text {
+    text-align: left;
+    font-size: small;
+  }
+  
+  i {
+   /* border: 1px solid green;*/
+    text-align: center;
+    width: 5vw;
+    height: 4vw;
+    font-size: 20px;
+  }
+  
+  .icon {
+   /* border: 1px solid orange;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+    width: 10vw;
+  }
+  
+  .block {
+    display: flex;
+  }
+  
+  .contenedor {
+     /*border: 5px solid red;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 25vw;
+    width: 70vw;
+  }
+
+  .product {
+    border: 1px solid black;
+    border-radius: 3%;
+    width: calc(80% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    
+  }
+  .pricing {
+    /* border: 5px solid red;*/
+     display: flex;
+     justify-content: left;
+     height: 300px;
+     width: 100%;
+   }
+
+}
